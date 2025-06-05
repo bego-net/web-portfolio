@@ -1,0 +1,220 @@
+:root {
+  --primary: #2A2B2E;
+  --accent: #00FF88;
+  --text: #F8F9FA;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: var(--primary);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+
+
+.nav {
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(37, 46, 74, 0.95);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--accent);
+}
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  padding: 4rem 2rem;
+  text-align: center;
+  z-index: 1;
+  background: var(--primary); /* Match your background color */
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #00FF88, #00CCFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-content h2{
+  font-family:cursive;
+}
+.profile {
+  text-align: center;
+  padding-top: 10px;
+}
+
+h2{
+  margin: 40px;
+  align-items: center;
+
+}
+
+p{
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 2rem auto;
+  display: block;
+  border: 3px solid var(--accent);
+}
+
+.skills {
+  text-align: center; 
+  padding: 4rem 1rem; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+}
+
+.skills h2 {
+  margin-bottom: 2rem;
+ 
+}
+
+.skills-grid {
+  display: flex; /* Changed from grid to flex for this layout */
+  justify-content: center; /* Centers skill items horizontally */
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  gap: 2rem; /* Space between items */
+}
+
+.skill-item {
+  width: 280px; /* Fixed width for each skill box */
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 0 20px rgba(255, 251, 0, 0.3);
+
+}
+
+.skill-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+/* Container for both elements */
+.projects{
+  margin-top: 50px;
+  overflow: auto; /* Contains floated elements */
+}
+
+.project-img {
+  float: right;
+  width: 50%; /* Adjust as needed */
+  margin-left: 20px; /* Space between image and text */
+  margin-bottom: 20px; /* Space below image */
+}
+
+.future-project {
+  margin-right: 20px; /* Prevents text from touching image */
+  padding-left: 140px;
+}
+.contact{
+  
+  text-align: center;
+}
+
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-btn {
+  padding: 1rem 2rem;
+  background: rgb(8, 146, 220);
+  color: var(--primary);
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+  background-color: whitesmoke;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem 5%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+  }
+
+  .hero-content h1 {
+      font-size: 2.5rem;
+  }
+
+}
+
+.certificates-grid {
+  display: flex; /* Use Flexbox to arrange items in a row */
+  justify-content: space-between; /* Distribute space evenly between items */
+  margin: 20px 0; /* Add some margin above and below the grid */
+}
+
+.cer {
+  flex: 1; /* Allow each certificate div to grow and fill available space */
+  margin: 0 10px; /* Add horizontal margin between images */
+  overflow: hidden; /* Ensure no overflow if images are larger */
+}
+
+.ceri-img {
+  width: 100%; /* Make images responsive to fill their container */
+  height: auto; /* Maintain aspect ratio */
+  transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.cer:hover .ceri-img {
+  opacity: 0.6; /* Change opacity on hover */
+}
